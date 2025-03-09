@@ -5,8 +5,7 @@
 ### Prasyarat
 - Pastikan PHP (>=8.1) sudah terinstal
 - Instal Composer
-- Instal Node.js dan npm
-- Siapkan database MySQL atau PostgreSQL
+- Siapkan database MySQL (XAMPP)
 
 ### Langkah-langkah
 1. Clone repositori:
@@ -14,22 +13,17 @@
    git clone <repository-url>
    cd <project-folder>
    ```
-2. Instal dependensi:
-   ```sh
-   composer install
-   npm install
-   ```
-3. Salin file environment dan atur variabel lingkungan:
+2. Salin file environment dan atur variabel lingkungan:
    ```sh
    cp .env.example .env
    php artisan key:generate
    ```
-4. Konfigurasi pengaturan database di `.env`
-5. Jalankan migrasi dan isi database:
+3. Konfigurasi pengaturan database di `.env`
+4. Jalankan migrasi:
    ```sh
-   php artisan migrate --seed
+   php artisan migrate
    ```
-6. Jalankan aplikasi:
+5. Jalankan aplikasi:
    ```sh
    php artisan serve
    ```
@@ -47,7 +41,6 @@
 - [ ] Membuat model dan migration untuk **Skripsi**
 - [ ] Membuat **SkripsiController** dengan resource controller
 - [ ] Menulis validasi untuk input data skripsi
-- [ ] Mengembangkan operasi CRUD dengan Eloquent ORM
 - [ ] Menerapkan rute API di `routes/api.php`
 
 ### Pengujian API dengan Postman
